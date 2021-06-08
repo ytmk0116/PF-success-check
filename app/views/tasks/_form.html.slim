@@ -1,3 +1,8 @@
+- if task.errors.present? 
+  ul#error_explanation
+    - task.errors.full_messages.each do |message|
+      li = message
+
 = form_with model: task, local: true do |f|
   /@taskをパーシャルから利用できるようにローカル変数に変更
   .form-group
